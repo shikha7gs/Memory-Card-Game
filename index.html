@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Memory Card Game</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div class='game-header'>
+        <h1 class='game-title'>Memory Match</h1>
+        <div class='difficulty-select'>
+            <button class='difficulty-btn active' data-difficulty='easy'>Easy</button>
+            <button class='difficulty-btn' data-difficulty='medium'>Medium</button>
+            <button class='difficulty-btn' data-difficulty='hard'>Hard</button>
+        </div>
+        <div class='game-stats'>
+            <div class='stat'>
+                <div class='stat-label'>Moves</div>
+                <div class='stat-value' id='moves'>0</div>
+            </div>
+            <div class='stat'>
+                <div class='stat-label'>Time</div>
+                <div class='stat-value' id='time'>0:00</div>
+            </div>
+            <div class='stat'>
+                <div class='stat-label'>Score</div>
+                <div class='stat-value' id='score'>0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class='game-grid' id='gameGrid'></div>
+
+    <div class='game-controls'>
+        <button class='btn' id='restartBtn'>Restart Game</button>
+    </div>
+
+    <div class='leaderboard'>
+        <h2 class='leaderboard-title'>Leaderboard</h2>
+        <ul class='leaderboard-list' id='leaderboard'></ul>
+    </div>
+
+    <div class='modal' id='gameOverModal'>
+        <div class='modal-content'>
+            <h2 class='modal-title'>Congratulations!</h2>
+            <div class='stars-container' id='starsContainer'></div>
+            <p class='modal-text' id='modalText'></p>
+            <button class='btn' id='playAgainBtn'>Play Again</button>
+        </div>
+    </div>
+
+    <div class='achievement' id='achievement'>
+        <span id='achievementText'></span>
+    </div>
+
+    <script src='game.js'></script>
+</body>
+</html>
